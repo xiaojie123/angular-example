@@ -1,0 +1,122 @@
+@import '../../bower_components/bootstrap/less/bootstrap.less';
+@import '../../bower_components/font-awesome/less/font-awesome.less';
+@icon-font-path: '../../bower_components/bootstrap/fonts/';
+@fa-font-path: '../../bower_components/font-awesome/fonts';
+
+@font-family-sans-serif: Helvetica, Tahoma, Arial,"Microsoft YaHei", "微软雅黑", sans-serif;;
+@font-size-base:12px;
+
+
+//@border-radius-base:             0px;
+//@border-radius-large:            0px;
+//@border-radius-small:            0px;
+
+
+@navbar-height:                  35px;
+@navbar-inverse-color:                      @gray-lighter;
+@navbar-inverse-bg:                         #28529e;
+//660000
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-color:                 @gray-lighter;
+
+// Grid system
+@grid-gutter-width:         10px;
+
+//Footer
+@footer-height:             30px;
+
+@panel-heading : #E9F0F5;
+@panel-height:200px;
+
+//table
+@table-cell-padding : 5px;
+
+//nav
+@nav-link-padding:5px 15px;
+
+//modal
+@modal-title-padding:         5px;
+@modal-inner-padding:         5px;
+
+@table-heading:         #E9F0F5;
+
+//form
+@form-group-margin-bottom:5px;
+
+html,body
+{
+  height:100%;
+  background-color: #fff;
+}
+
+//容器
+.main-container
+{
+  min-height:100%;
+}
+.navbar-brand{
+  padding-left: 30px;
+  padding-right: 30px;
+  img{
+    height:30px;
+  }
+}
+.footer
+{
+  height: @footer-height;
+  line-height: @footer-height;
+  margin-top: -@footer-height;
+  background: @navbar-inverse-bg;
+  color:#F5F5F5;
+}
+a{
+  cursor:pointer;
+}
+.footer-stub
+{
+  display: block;
+  height: @footer-height;
+}
+
+.page-header {
+  height: 38px;
+  margin:0 0;
+  line-height: 38px;
+  margin-bottom: @grid-gutter-width;
+  h2
+  {
+    margin-top:0;
+    margin-bottom: 0;
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 10px;
+  }
+}
+
+.panel .panel-tools{
+  padding: 2px;
+  background: #f1f1f1;
+}
+
+
+.ui-grid {
+  width: 100%;
+  height: 390px;
+
+  .ui-grid-pager-panel{
+    background: #e0e0e0;
+  }
+  .ui-grid-menu-button{
+    height: 22px;
+  }
+  .ui-grid-render-container-body .ui-grid-viewport{
+    height: 380px;
+  }
+}
+
+#loading-bar .bar {
+  background: #f00;
+}
+
+
