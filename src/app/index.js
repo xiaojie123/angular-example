@@ -25,7 +25,8 @@ var app = angular.module('angular example',
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
   }
-  ]).config(function(blockUIConfig) {
+  ])
+  .config(function(blockUIConfig) {
     blockUIConfig.message = '请求处理中...';
     blockUIConfig.delay = 100;
     blockUIConfig.autoBlock = true;
@@ -55,3 +56,4 @@ var app = angular.module('angular example',
   })
   .constant('Endpoint',{
   });
+
