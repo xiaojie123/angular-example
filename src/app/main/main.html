@@ -1,41 +1,44 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div ng-controller="MainCtrl">
-  MainPag
-  <div class="uk-grid">
-    <div class="uk-width-1-10">左侧空白</div>
+  <div class="uk-grid uk-grid-collapse ">
+    <div class="uk-width-1-10"></div>
     <div class="uk-width-8-10">
-      <div>发布表单 <input type="text" placeholder="地址" value=""></div>
-      <div class="uk-grid">
+      <div class="uk-width-1-1 top1">发布表单 <input type="text" placeholder="地址" value=""></div>
+      <div class="uk-grid uk-grid-collapse">
         <div class="uk-width-7-10">
           <div class="addform">
-            <input type="text" placeholder="未命名表单" value="">
+             <div class="uk-width-1-1 top2"><input type="text" placeholder="未命名表单" value=""></div>
+            <div ng-repeat="control in controls" style="cursor:pointer;border: 1px solid pink" ng-click="danhang()">
+              <table>{{control.title}}</table>
+              <div> <input type="text"style="cursor:pointer" ng-model="control.content"></div>
+            </div>
           </div>
-          <div class="uk-grid">
+          <div class="uk-grid uk-grid-collapse">
             <div class="uk-width-1-4">
-              <div style="width:100px; height:30px;cursor:pointer;" onclick="addtext()">单行文本</div>
+              <div class="ziduan"  ng-click="addRow()">单行文本</div>
             </div>
             <div class="uk-width-1-4">
-              <div style="width:100px; height:30px;cursor:pointer;" onclick="addtextarea()">多行文本</div>
+              <div class="ziduan"  ng-click="addRow()" >多行文本</div>
             </div>
             <div class="uk-width-1-4">
-              <div style="width:100px; height:30px;cursor:pointer;" onclick="addradio()">单项选择</div>
+              <div class="ziduan"  ng-click="addRow()" >单项选择</div>
             </div>
             <div class="uk-width-1-4">
-              <div style="width:100px; height:30px;cursor:pointer;" onclick="addcheckbox()">多项选择</div>
+              <div class="ziduan"  ng-click="addRow()" >多项选择</div>
             </div>
           </div>
         </div>
         <div class="uk-width-3-10">
-          <div class="addtext" style="display: block">
-            <div>标题<input type="text" ng-model="greeting.text"></div>
+          <div ng-repeat="control in controls">
+            <table>标题</table>
+            <div> <input type="text" ng-model="control.title"></div>
+            <table>提示</table>
+            <div> <input type="text" ng-model="control.content"></div>
           </div>
-          <div class="addtextarea" style="display: none"></div>
-          <div class="addradio" style="display: none"></div>
-          <div class="addcheckbox" style="display: none" ></div>
         </div>
       </div>
     </div>
-    <div class="uk-width-1-10">右侧空白</div>
+    <div class="uk-width-1-10"></div>
   </div>
 </div>
 <div class="footer-stub"></div>
