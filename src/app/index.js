@@ -50,7 +50,7 @@ var app = angular.module('angular example',
     };
   })
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
+   $urlRouterProvider
       .otherwise('/');
     $locationProvider.html5Mode(true).hashPrefix('!');
   })

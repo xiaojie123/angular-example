@@ -1,0 +1,9 @@
+<div ng-controller="PhoneCtrl">
+  Search: <input ng-model="query">
+<ul class="phones">
+  <li ng-repeat="phone in phones | filter:query">
+    {{phone.name}}
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul>
+</div>
