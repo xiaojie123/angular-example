@@ -1,0 +1,73 @@
+<div ng-controller="validateCtrl">
+<!--<form name="form" novalidate ng-submit="submitFrom(form.$valid)">
+  //使用指令的必须条件必须要设置一个name，novalidate禁用掉浏览器（比如说HTML5）提供的原生的验证条件。
+  //angular表单验证的指令，re
+  <div class="form-group row">
+    <label class="col-sm-2 control-label text-right">
+      <span class="text-danger">*</span>姓名：
+    </label>
+    <input type="text" class="form-control" name="userName" ng-model="entity.userName" ng-required>
+  </div>
+  <div class="help-block col-sm-4" ng-show="form.userName.$dirty && form.userName.$invalid">
+    <span class="text-danger" ng-show="form.userName.$error.required">请填写姓名</span>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 control-label text-right">
+      <span class="text-danger">*</span>邮箱：
+    </label>
+      <input type="email" class="form-control" name="email" ng-model="entity.email" ng-required>
+  </div>
+  <div class="help-block col-sm-4" ng-show="form.email.$dirty && form.email.$invalid">
+    <span class="text-danger" ng-show="form.email.$error.email">请填写正确的邮箱地址</span>
+    <span class="text-danger" ng-show="form.email.$error.required">请填写邮箱地址</span>
+    </div>
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="sunmit" class="btn btn-primary" ng-disabled="form.$invalid">确定</button>
+    </div>
+  </div>
+</form>-->
+  <form name="form" novalidate ng-submit="submitForm(form.$valid)">
+    <div class="form-group" ng-class="{ 'has-error' : form.userName.$invalid && form.userName.$dirty}">
+      <label class="col-sm-2 control-label text-right"><span class="text-danger">*</span>姓名：</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="userName"
+               ng-model="entity.userName" ng-required="true">
+      </div>
+      <div class="help-block col-sm-4" ng-show="form.userName.$dirty && form.userName.$invalid">
+                <span class="text-danger"
+                      ng-show="form.userName.$error.required">请填写姓名</span>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid && form.email.$dirty}">
+      <label class="col-sm-2 control-label text-right"><span class="text-danger">*</span>邮箱：</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" name="email"
+               ng-model="entity.email" ng-required="true">
+      </div>
+      <div class="help-block col-sm-4" ng-show="form.email.$dirty && form.email.$invalid">
+                <span class="text-danger"
+                      ng-show="form.email.$error.email">请填写正确的邮箱地址</span>
+                <span class="text-danger"
+                      ng-show="form.email.$error.required">请填写邮箱</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label text-right">地址：</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="addr"
+               ng-maxlength="12"
+               ng-model="entity.addr">
+      </div>
+      <div class="help-block col-sm-4" ng-show="form.addr.$dirty && form.addr.$invalid">
+            <span class="text-danger"
+                  ng-show="form.addr.$error.maxlength">最大长度为12</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-4">
+        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </form>
+</div>

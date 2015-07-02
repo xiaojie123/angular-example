@@ -1,0 +1,9 @@
+<div ng-controller="validateCtrl">
+  <form name="userFrom" novelidate>
+    <div class="form-group" ng-repeat="user in formData.users">
+      <label>{{user.name}}'s Email</label>
+      <input type="text" class="form-control" name="email" ng-model="user.email" required>
+      <p class="help-block" ng-show="userForm.email.$invaild">valid Email Address required</p>
+    </div>
+  </form>
+</div>
