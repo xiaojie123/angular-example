@@ -5,6 +5,6 @@ app.directive("hello",function(){
   return{
     restrict:'AEMC',
     template:'<div>Hi everyone!</div>',
-    replate:true
+    replace:true
   }
 });
