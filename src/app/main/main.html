@@ -42,6 +42,34 @@
   </div>-->
   <p>例子1</p>
   <p>{{greeting.text}},angular</p>
+  <p>例子2</p>
+  Your name: <input type="text" ng-model="yourname" placeholder="World">
+  <hr>
+  Hello {{yourname || 'World'}}!
+  <p>例子3</p>
+  <fieldset>
+  <b>计算</b>
+  <br>
+  <table>
+    <tr>
+      <td>单价：（美元）</td>
+      <td>数量</td>
+    </tr>
+    <tr>
+      <td><input type="number" ng-model="qty" required> </td>
+      <td><input type="number" ng-model="cost" required> </td>
+    </tr>
+  </table>
+  <b>金额：</b>{{qty*cost|currency}}
+  </fieldset>
+  <P>例子4</P>
+  <fieldset>
+  <b>改变model来控制DOM</b>
+  <br>
+  <legend>例子</legend>
+    <input type="text" ng-model="data.msg"/>
+    <div class="{{data.msg}}">我是一个{{data.msg}}</div>
+  </fieldset>
 <!-- <my-tabs>
     <my-pane title="Hello">
       <h5 id="creating-custom-directives_source_hello">Hello</h5>

@@ -1,8 +1,8 @@
 /**
  * Created by avc on 2015/7/2.
  */
-describe('PhoneCat controllers', function() {
-
+/*
+"use strict"
   describe('PhoneCtrl', function(){
 
     it('should create "phones" model with 3 phones', function() {
@@ -12,4 +12,5 @@ describe('PhoneCat controllers', function() {
       expect(scope.phones.length).toBe(3);
     });
   });
-});
+
+*/
