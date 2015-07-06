@@ -1,8 +1,6 @@
 /**
  * Created by avc on 2015/6/30.
  */
-<<<<<<< HEAD
-=======
 app.directive("loader",function() {
   return {
     restrict: "AE",
@@ -16,4 +14,3 @@ app.directive("loader",function() {
     }
   }
 });
->>>>>>> 8beac20bc3eff0961dbd1c504946fb09390ffdb3
